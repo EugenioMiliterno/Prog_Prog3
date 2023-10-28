@@ -5,4 +5,5 @@
 ### Pasquale Ruotolo (****)
 ### Pasquale Biancarosa (****)
 ***
-GNU GPLv3
+# GNU GPLv3
+## Vietata la vendita e la distribuzione non autorizzata del codice e delle documentazioni
