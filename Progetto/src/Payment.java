@@ -1,5 +1,6 @@
-package Progetto;
+package Progetto.src;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 interface PaymentStrategy {
     void pay(BigDecimal amount);
@@ -16,6 +17,39 @@ class CreditCardPaymentStrategy implements PaymentStrategy {
         this.cardNumber = cardNumber;
         this.cvv = cvv;
         this.expirationDate = expirationDate;
+    }
+
+    String getName() {
+        return name;
+    }
+    String getCNumb(){
+        return cardNumber;
+    }
+    String getCVV(){
+        return cvv;
+    }
+    String getExpDate(){
+        return expirationDate;
+    }
+
+    private boolean compareDate(LocalDate A, LocalDate B){
+        if(A.compareTo(B) > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    private boolean ValidPayment(String num,String exp, String CVV){
+        LocalDate today = LocalDate.now();
+        LocalDate expDate = LocalDate.parse(exp);
+        boolean esito = false;
+        if(Integer.valueOf(num)>0 && compareDate(expDate, today) && (Integer.parseInt(CVV)>0 && Integer.parseInt(CVV) < 1000)){
+            esito = true;
+        }else{
+            esito = false;
+        }
+        return esito;
     }
 
     @Override

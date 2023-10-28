@@ -1,8 +1,6 @@
-package Progetto;
-
+package Progetto.src;
 import java.util.Date;
 
-//import Progetto.Reservation;
 public class Employee {
 private 
     String nome,cognome,cf;
@@ -17,6 +15,8 @@ public
         this.eta=e;
         this.stipendio=sal;
     }
+    public Employee() {
+}
     int getID(){return this.ID;}
     String getNome(){return this.nome;}
     String getCognome(){return this.cognome;}

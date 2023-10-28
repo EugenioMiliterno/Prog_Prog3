@@ -1,9 +1,5 @@
-package Progetto;
-
-import java.time.LocalDate;
-import java.io.*;
+package Progetto.src;
 import java.util.Date;
-import java.util.Enumeration; 
 
 public class Reservation {
     private Date date;
@@ -12,10 +8,21 @@ public class Reservation {
     private String clientPhoneNumber;
 
     public Reservation(Date d, int partySize, String clientName, String clientPhoneNumber) {
-        Date today = new Date(26, 5, 2021);
+        this.date = d;
         this.partySize = partySize;
         this.clientName = clientName;
         this.clientPhoneNumber = clientPhoneNumber;
+        Employee employee = extracted();
+        boolean esito = employee.validateBooking(this, clientName);
+        if(esito){
+            System.out.println("Prenotazione valida");
+        }else{
+            System.out.println("Prenotazione non valida");
+        }
+    }
+
+    private Employee extracted() {
+        return new Employee();
     }
 
     public Date getDate() {

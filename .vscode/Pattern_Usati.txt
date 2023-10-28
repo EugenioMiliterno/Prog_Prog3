@@ -1,0 +1,7 @@
+State
+Observer
+Factory
+Strategy
+Decorator
+Command
+---------
