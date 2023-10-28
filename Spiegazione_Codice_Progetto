@@ -1,0 +1,7 @@
+1. Il progetto deve gestire UNICAMENTE il sistema di ordini
+2. L'accesso può avvenire in modalità Admin o in modalità Waiter (si può switchare?) [ **TODO** ]
+3. Le funzionalità garantite da ciascun accesso SONO DA IMPLEMENTARE [ **TODO** ]
+4. Gli ordini possono essere fatti od annullati, e si può anche modificare un piatto? [ **TODO** ]
+5. Il camiere deve controllare che la prenotazione sia valida
+6. Il cliente che prenota un tavolo/ordine lo fa seguendo i criteri classici (nome, cognome ecc)
+7. L'ordine può essere pagato UNICAMENTE in toto, e tramite carta o cash
