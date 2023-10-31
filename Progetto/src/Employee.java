@@ -1,32 +1,31 @@
 package Progetto.src;
 import java.util.Date;
+import java.util.Random;
 
-//Classe per gestire gli Impiegati (ovvero i camerieri)
 public class Employee {
-private
-    //Attributi (gID = global ID)
+private 
+    Random random = new Random();
     String nome,cognome,cf;
-    int eta,ID,gID = 1;
+    int eta,ID;
     double stipendio;
+    
 public
     Employee(String n ,String cn ,String cf,int e ,double sal){
         this.nome=n;
         this.cognome=cn;
         this.cf=cf;
-        this.ID = gID++;
+        this.ID = random.nextInt(100);
         this.eta=e;
         this.stipendio=sal;
     }
-    //Costruttore senza parametri
-    public Employee() {}
-    //Metodi Getter
+    public Employee() {
+}
     int getID(){return this.ID;}
     String getNome(){return this.nome;}
     String getCognome(){return this.cognome;}
     String getCf(){return this.cf;}
     int getEta(){return this.eta;}
     double getStipendio(){return this.stipendio;}
-    //Function per controllare se una prenotazione è valida
     public boolean validateBooking(Reservation reservation,String TableName) {
         boolean e;
         Date d = reservation.getDate();
