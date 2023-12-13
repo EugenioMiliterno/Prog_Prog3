@@ -1,6 +1,8 @@
 package Progetto.src;
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -25,9 +27,9 @@ public class Main {
             AS = new AdminAccess();
             A.setState(AS);
         }else if(pw == "Studente"){
-            AS = new WaiterAccess();            A.setState(AS);
+            AS = new WaiterAccess();
+            A.setState(AS);
         }
-        System.out.println("Access: " + A.getState());
         Random R = new Random();
         Order o = new Order();
         Date DATA = new Date(2023, 10, 30);
