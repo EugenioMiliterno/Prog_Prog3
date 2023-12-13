@@ -15,11 +15,31 @@ public class Main {
         Access A = new Access(pw);
         AccessState AS;
         ArrayList<Employee> employees = new ArrayList<Employee>();
-        employees.add(new Employee("Mario", "Rossi","MR001", 24,800.23));
-        employees.add(new Employee("Luigi", "Verdi","LV001", 42,1000.34));
-        employees.add(new Employee("Giovanni", "Bianchi","GB001", 33,800.24));
-        employees.add(new Employee("Giuseppe", "Neri","GN001", 41,900.21));
-        employees.add(new Employee("Paolo", "Gialli", "PG001", 35, 600.10));
+        int num_dip;
+        System.out.println("Inserisci il numero di dipendenti: ");
+        num_dip = sc.nextInt();
+        int glob_ID = 1;
+        for(int i=0;i<num_dip;i++){
+            String n,c,cf;
+            int e;
+            double sal;
+            System.out.println("Inserisci il nome: ");
+            n = sc.nextLine();
+            System.out.println("Inserisci il cognome: ");
+            c = sc.nextLine();
+            System.out.println("Inserisci il codice fiscale: ");
+            cf = sc.nextLine();
+            System.out.println("Inserisci l'età: ");
+            e = sc.nextInt();
+            System.out.println("Inserisci lo stipendio: ");
+            sal = sc.nextDouble();
+            employees.add(new Employee(n,c,cf,e,sal));
+            EmployeeAccess EA = new EmployeeAccess(n,c,cf,e,sal,glob_ID++);
+            EA.saveEmployees(employees);
+        }
+        for(Employee e : employees){
+            e.StampaDati(e);
+        }
         ArrayList<Order> orders = new ArrayList<Order>();
         Menu M = new Menu();
         if(pw == "Ciaramella"){

@@ -36,4 +36,13 @@ public
         }
         return e;
     }
+    public void StampaDati(Employee e){
+        System.out.println("Employee Details:");
+        System.out.println("Name: " + e.getNome());
+        System.out.println("Surname: " + e.getCognome());
+        System.out.println("CF: " + e.getCf());
+        System.out.println("ID: " + e.getID());
+        System.out.println("Age: " + e.getEta());
+        System.out.println("Salary: " + e.getStipendio());
+    }
 }

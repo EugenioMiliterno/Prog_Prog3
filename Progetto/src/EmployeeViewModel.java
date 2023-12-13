@@ -1,4 +1,5 @@
 package Progetto.src;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeViewModel {
@@ -16,24 +17,23 @@ public class EmployeeViewModel {
 
     public void fetchData() {
         // Ottieni i dati degli employee tramite l'accesso
-        List<Employee> employees = access.getEmployees();
-
+        ArrayList<Employee> employees = access.getEmployees();
         // Aggiorna il modello con i dati ottenuti
         model.setEmployees(employees);
-
         // Aggiorna la vista con il modello aggiornato
         view.update(model);
     }
 
     public void saveData() {
         // Ottieni i dati dal modello
-        List<Employee> employees = model.getEmployees();
-
+        ArrayList<Employee> employees = model.getEmployees();
         // Salva i dati tramite l'accesso
         access.saveEmployees(employees);
     }
 
+    ArrayList<Employee> getEmployees(){return model.getEmployees();}
+
     public int getAge() {
-        return 0;
+        return model.getAge();
     }
 }

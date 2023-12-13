@@ -1,4 +1,5 @@
 package Progetto.src;
+import java.util.ArrayList;
 import java.util.Random;
 import java.time.LocalDate;
 
@@ -9,16 +10,18 @@ private
     Random random = new Random();
     double stipendio;
     int eta,ID;
+    ArrayList<Employee> employees = new ArrayList<Employee>();
 public
-    EmployeeAccess(String n ,String cn ,String cf,int e ,double sal){
+    EmployeeAccess(String n ,String cn ,String cf,int e ,double sal,int ID){
         this.nome=n;
         this.cognome=cn;
         this.cf=cf;
-        this.ID = random.nextInt(100);
+        this.ID = ID;
         this.eta=e;
         this.stipendio=sal;
+        employees.add(new Employee(n,cn,cf,e,sal));
     }
-    EmployeeAccess() {}
+    //EmployeeAccess() {}
     int getID(){return this.ID;}
     String getNome(){return this.nome;}
     String getCognome(){return this.cognome;}
@@ -37,4 +40,6 @@ public
         }
         return e;
     }
+    public void saveEmployees(ArrayList<Employee> employees){this.employees = employees;}
+    public ArrayList<Employee> getEmployees(){return employees;}
 }
