@@ -1,13 +1,14 @@
 package Progetto.src;
 import java.util.Date;
+import java.time.LocalDate;
 
 public class Reservation {
-    private Date date;
+    private LocalDate date;
     private int partySize;
     private String clientName;
     private String clientPhoneNumber;
 
-    public Reservation(Date d, int partySize, String clientName, String clientPhoneNumber) {
+    public Reservation(LocalDate d, int partySize, String clientName, String clientPhoneNumber) {
         this.date = d;
         this.partySize = partySize;
         this.clientName = clientName;
@@ -25,7 +26,7 @@ public class Reservation {
         return new Employee();
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 

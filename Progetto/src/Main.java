@@ -3,6 +3,7 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import java.time.LocalDate;
 
 public class Main {
     String pw;
@@ -31,7 +32,7 @@ public class Main {
         System.out.println("Access: " + A.getState());
         Random R = new Random();
         Order o = new Order();
-        Date DATA = new Date(2023, 10, 30);
+        LocalDate DATA = LocalDate.of(2023, 10, 30);
         Reservation R1 = new Reservation(DATA,3,"Carlo","3336808802");
         sc.close();
     }
