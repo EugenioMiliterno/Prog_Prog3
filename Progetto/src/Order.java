@@ -33,7 +33,6 @@ public class Order implements Observer {
         totalCost -= dish.getCost();
     }
 
-
     public double getTotalCost() {
         return totalCost;
     }

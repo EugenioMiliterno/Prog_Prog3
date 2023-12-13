@@ -8,7 +8,6 @@ private
     String nome,cognome,cf;
     int eta,ID;
     double stipendio;
-    
 public
     Employee(String n ,String cn ,String cf,int e ,double sal){
         this.nome=n;
@@ -18,8 +17,7 @@ public
         this.eta=e;
         this.stipendio=sal;
     }
-    public Employee() {
-}
+    public Employee() {}
     int getID(){return this.ID;}
     String getNome(){return this.nome;}
     String getCognome(){return this.cognome;}

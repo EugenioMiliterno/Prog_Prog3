@@ -25,9 +25,9 @@ public class Main {
             AS = new AdminAccess();
             A.setState(AS);
         }else if(pw == "Studente"){
-            AS = new WaiterAccess();
-            A.setState(AS);
+            AS = new WaiterAccess();            A.setState(AS);
         }
+        System.out.println("Access: " + A.getState());
         Random R = new Random();
         Order o = new Order();
         Date DATA = new Date(2023, 10, 30);
