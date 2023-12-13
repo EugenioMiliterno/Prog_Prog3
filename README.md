@@ -2,7 +2,7 @@
 ***
 ## Componenti:
 ### Eugenio Militerno (2454)
-### Pasquale Ruotolo (****)
+### Pasquale Ruotolo (2322)
 ### Pasquale Biancarosa (****)
 ***
 # GNU GPLv3
