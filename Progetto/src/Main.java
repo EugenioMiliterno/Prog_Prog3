@@ -13,7 +13,6 @@ public class Main {
         System.out.println("Inserisci la password: ");
         String pw = sc.nextLine();
         Access A = new Access(pw);
-        System.out.println("PW:" + pw);
         AccessState AS;
         ArrayList<Employee> employees = new ArrayList<Employee>();
         employees.add(new Employee("Mario", "Rossi","MR001", 24,800.23));
