@@ -32,14 +32,8 @@ public class EmployeeViewModel {
         // Salva i dati tramite l'accesso
         access.saveEmployees(employees);
     }
-}
-public class EmployeeAccess {
-    // Implementa qui la logica per l'accesso ai dati degli employee
-    public List<Employee> getEmployees() {
-        // Implementa qui la logica per ottenere i dati degli employee
-    }
 
-    public void saveEmployees(List<Employee> employees) {
-        // Implementa qui la logica per salvare i dati degli employee
+    public int getAge() {
+        return 0;
     }
 }
