@@ -1,4 +1,5 @@
 package Progetto.src;
+import java.util.Scanner;
 
 public class Access {
     private AccessState state;
@@ -10,6 +11,12 @@ public class Access {
         }else if(pw == "Ciaramella"){
             this.state = new AdminAccess();
             System.out.println("Admin access granted.");
+        }else{
+            while(pw != "Studente" && pw != "Ciaramella"){
+                System.out.println("Password Incorretta, riprova.");
+                Scanner sc = new Scanner(System.in);
+                pw = sc.nextLine();
+            }
         }
     }
 
