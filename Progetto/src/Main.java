@@ -18,7 +18,6 @@ public class Main {
         int num_dip;
         System.out.println("Inserisci il numero di dipendenti: ");
         num_dip = sc.nextInt();
-        int glob_ID = 1;
         for(int i=0;i<num_dip;i++){
             String n,c,cf;
             int e;
@@ -34,21 +33,14 @@ public class Main {
             System.out.println("Inserisci lo stipendio: ");
             sal = sc.nextDouble();
             employees.add(new Employee(n,c,cf,e,sal));
-            EmployeeAccess EA = new EmployeeAccess(n,c,cf,e,sal,glob_ID++);
+            EmployeeAccess EA = new EmployeeAccess(n,c,cf,e,sal,i+1);
             EA.saveEmployees(employees);
         }
         for(Employee e : employees){
-            e.StampaDati(e);
+            e.StampaDati();
         }
         ArrayList<Order> orders = new ArrayList<Order>();
         Menu M = new Menu();
-        if(pw == "Ciaramella"){
-            AS = new AdminAccess();
-            A.setState(AS);
-        }else if(pw == "Studente"){
-            AS = new WaiterAccess();
-            A.setState(AS);
-        }
         Random R = new Random();
         Order o = new Order();
         LocalDate DATA = LocalDate.of(2024, 10, 30);
