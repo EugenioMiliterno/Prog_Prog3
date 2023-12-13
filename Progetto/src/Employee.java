@@ -1,6 +1,6 @@
 package Progetto.src;
-import java.util.Date;
 import java.util.Random;
+import java.time.LocalDate;
 
 public class Employee {
 private 
@@ -26,10 +26,10 @@ public
     double getStipendio(){return this.stipendio;}
     public boolean validateBooking(Reservation reservation,String TableName) {
         boolean e;
-        Date d = reservation.getDate();
-        Date today = new Date(2023,10,27);
+        LocalDate d = reservation.getDate();
+        LocalDate today = LocalDate.now();
         String resName = reservation.getClientName();
-        if(d.after(today) && resName.equals(TableName)){
+        if(d.isAfter(today) && resName.equals(TableName)){
             e = true;
         }else{
             e = false;

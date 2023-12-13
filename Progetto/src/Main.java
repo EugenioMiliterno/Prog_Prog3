@@ -1,10 +1,10 @@
 package Progetto.src;
 import java.sql.Date;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
+import java.time.LocalDate;
 
 public class Main {
     String pw;
@@ -27,12 +27,11 @@ public class Main {
             AS = new AdminAccess();
             A.setState(AS);
         }else if(pw == "Studente"){
-            AS = new WaiterAccess();
-            A.setState(AS);
+            AS = new WaiterAccess();            A.setState(AS);
         }
         Random R = new Random();
         Order o = new Order();
-        Date DATA = new Date(2023, 10, 30);
+        LocalDate DATA = LocalDate.of(2024, 10, 30);
         Reservation R1 = new Reservation(DATA,3,"Carlo","3336808802");
         sc.close();
     }
