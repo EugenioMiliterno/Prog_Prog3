@@ -1,7 +1,5 @@
 package Progetto.src;
-import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 import java.time.LocalDate;
@@ -13,7 +11,6 @@ public class Main {
         System.out.println("Inserisci la password: ");
         String pw = sc.nextLine();
         Access A = new Access(pw);
-        AccessState AS;
         ArrayList<Employee> employees = new ArrayList<Employee>();
         int num_dip;
         System.out.println("Inserisci il numero di dipendenti: ");
@@ -48,3 +45,12 @@ public class Main {
         sc.close();
     }
 }
+
+
+
+//TODO: 
+// 1) Sistemare gestione dipendenti
+// 2) Aggiungere controllo sull'accesso, ed implementarne le funzioni
+// 3) Aggiungere gestione ordini
+// 4) Aggiungere gestione prenotazioni
+// 5) Gestione Cliente

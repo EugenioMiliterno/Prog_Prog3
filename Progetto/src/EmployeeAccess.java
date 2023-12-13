@@ -5,7 +5,6 @@ import java.time.LocalDate;
 
 public class EmployeeAccess {
 private
-    AccessState state;
     String nome,cognome,cf;
     Random random = new Random();
     double stipendio;
