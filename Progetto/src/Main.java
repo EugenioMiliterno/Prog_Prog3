@@ -26,7 +26,8 @@ public class Main {
             AS = new AdminAccess();
             A.setState(AS);
         }else if(pw == "Studente"){
-            AS = new WaiterAccess();            A.setState(AS);
+            AS = new WaiterAccess();
+            A.setState(AS);
         }
         Random R = new Random();
         Order o = new Order();
