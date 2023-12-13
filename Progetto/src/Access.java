@@ -3,16 +3,19 @@ import java.util.Scanner;
 
 public class Access {
     private AccessState state;
-
+    String pwInserted;
     public Access(String pw) {
-        if(pw == "Studente"){
+        if(pw.equals("Studente")){
             this.state = new WaiterAccess();
             System.out.println("Waiter access granted.");
-        }else if(pw == "Ciaramella"){
+        }else if(pw.equals("Ciaramella")){
             this.state = new AdminAccess();
             System.out.println("Admin access granted.");
         }else{
-            while(pw != "Studente" && pw != "Ciaramella"){
+            while(!pw.equals("Studente") && !pw.equals("Ciaramella")){
+                if(pw.equals("Esci")){
+                    System.exit(0);
+                }
                 System.out.println("Password Incorretta, riprova.");
                 Scanner sc = new Scanner(System.in);
                 pw = sc.nextLine();
