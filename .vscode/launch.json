@@ -9,6 +9,13 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "Progetto.src.Main",
+            "projectName": "Prog_Prog3_489a6256"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Progetto.src.Main",
             "projectName": "Prog_Prog3_346c28f0"
         },
         {
