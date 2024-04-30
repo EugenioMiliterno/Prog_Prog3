@@ -5,7 +5,7 @@ import java.sql.*;
 public class MyJDBC {
     public static void main(String[] args) {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://database-1.cfcoik2qycvy.eu-north-1.rds.amazonaws.com:3306/restaurant", "root", "56265626");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://database-1.cfcoik2qycvy.eu-north-1.rds.amazonaws.com:3306/restaurant", "root", "*");
 
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM menus");
